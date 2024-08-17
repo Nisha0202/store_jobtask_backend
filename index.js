@@ -24,18 +24,9 @@ const client = new MongoClient(uri, {
 // Function to connect to MongoDB and set up the routes
 async function run() {
   try {
-    await client.connect(); // Establish the connection to the database
+  
 
     const productsSort = client.db('productssort').collection('products');
-
-    // app.get('/products', async (req, res) => {
-    //   try {
-    //     const products = await productsSort.find().toArray();
-    //     res.json(products);
-    //   } catch (error) {
-    //     res.status(500).json({ message: 'Failed to fetch products', error });
-    //   }
-    // });
 
     app.get('/products', async (req, res) => {
       const { page = 1, limit = 9, search = '', brand = '', category = '', priceRange = '', sort = '', order = 'asc' } = req.query;
