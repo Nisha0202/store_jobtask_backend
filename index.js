@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.S3_BUCKET}:${process.env.SECRET_KEY}@cluster0.5cua0xk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-const ObjectId = require('mongodb').ObjectId;
+
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -23,8 +23,8 @@ const client = new MongoClient(uri, {
 
 // Function to connect to MongoDB and set up the routes
 async function run() {
+
   try {
-  
 
     const productsSort = client.db('productssort').collection('products');
 
@@ -70,11 +70,6 @@ async function run() {
       }
     });
     
-
-
-
-
-
 
   } catch (error) {
     console.error(error);
