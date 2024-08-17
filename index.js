@@ -5,6 +5,7 @@ require('dotenv').config()
 
 const port = process.env.PORT || 5000;
 const { MongoClient, ServerApiVersion } = require('mongodb');
+
 // middleware
 app.use(cors());
 app.use(express.json());
@@ -63,6 +64,7 @@ async function run() {
         const products = await productsQuery.toArray();
     
         res.setHeader('X-Total-Count', totalProducts);
+        console.error('No Error');
         res.send(products);
       } catch (error) {
         console.error('Error fetching products:', error);
