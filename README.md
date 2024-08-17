@@ -151,4 +151,4 @@ Ensure all environment variables are properly set for both the frontend and back
 
 ---
 
-This README should help set up and run your project locally and provide a good foundation for others to understand the structure and purpose of the project.
+This README helps to set up and run the project locally and provide a good foundation for others to understand the structure and purpose of the project.
