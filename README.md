@@ -1,4 +1,5 @@
-## https://github.com/Nisha0202/store_jobtask_backend
+## github- https://github.com/Nisha0202/store_jobtask_backend
+## website - https://store1eda.netlify.app
 
 # MERN E-commerce Project
 
